@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {background-color: black;
+          color: white;}
+        h1{ text-align: center;
+            color: aqua;
+            text-shadow: 0px 0px 25px aqua }
+
+        h2{ text-align: center;
+            color: white;
+        }
+
+        #parent {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        div[id*=sheet] {
+            
+            color: white;
+            background-color: rgb(0, 0, 0);
+            width: 210px;
+            height: 80px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        #sheet_red{
+            
+            border-left: 10px solid red;
+            
+        }
+        #sheet_blue{
+            border-left: 10px solid blue;
+
+        }
+        #sheet_green{
+            border-left: 10px solid green;
+            
+        }
+        #sheet_white{
+            border-left: 10px solid white;
+            
+        }
+        #sheet_yellow{
+            border-left: 10px solid yellow;   
+            
+        }
+        #sheet_gold{
+            border-left: 10px solid gold;
+            
+        }
+        #ref{
+            text-align: center;
+        }
+        a{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color psychology</h1>
+
+    <h2>Cheatsheet</h2>
+
+    <p id="ref">
+        ref. <a href="#">pinterest</a>
+    </p>
+    <div id="parent">
+        <div id="sheet_red">
+            Red
+            <div>passion, love, anger, danger, warning</div>
+        </div>
+
+        <div id="sheet_blue">
+            Blue
+            <div>calmness, trust, loyalty, wisdom, mystery</div>
+        </div>
+        
+        <div id="sheet_green">
+            Green
+            <div>nature, growth, health, harmony, money</div>
+        </div>
+
+        <div id="sheet_white">
+            White
+            <div>purity, innocence, clearliness, peace</div>
+        </div>
+        
+        <div id="sheet_yellow">
+            Yellow
+            <div>sunshine, happiness, joy, intellect, caution</div>
+        </div>
+
+        <div id="sheet_gold">
+            Gold
+            <div>luxury, wealth, success, prestige, glamor</div>
+        </div>
+    </div>
+    
+ 
+
+</body>
+</html>
