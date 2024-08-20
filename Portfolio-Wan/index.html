@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허완</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        
+        
+        /******************** 페이지 전체 공통 설정 영역 *****************************/
+        /******************** 페이지 전체 공통 설정 영역 *****************************/        
+        html, body { cursor: url(images/too1137.cur), auto;}
+        .wrap{
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 999;
+            font-size: 30px;
+
+            box-sizing:border-box;
+            background-color: #FEFBD8;
+        }
+
+        .title{
+            text-align: center;
+            color: #724477;
+            margin: 2% 0 10% 0;
+        }
+
+        /******************** 헤더영역 *****************************/
+        /******************** 헤더영역 *****************************/
+        #header{
+            /* border: 1px solid blue; */
+            width: 100%;
+            height: 100px;
+            background-color: #EECEB9;
+        }
+
+        .nav{
+            
+            width: 100%;
+            padding: 10px 10px;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: right;
+            
+        }
+
+        ul>*{
+            float: left;
+            margin: 0 70px 0 0 ;
+            
+        }
+
+        ul>li>a{
+            text-decoration-line: none;
+            color: #987D9A;
+        }
+
+        ul>li>a:hover{
+            color: #d2c2d3;
+        }
+
+        /******************** 인트로 영역 *****************************/
+        /******************** 인트로 영역 *****************************/        
+        #intro{
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            margin: 150px 0 350px 0;
+
+        }
+
+        #image-intro > img{
+            width: 200px;
+            border: 30px solid #EECEB9;
+            border-radius: 100px;
+        }
+
+        #btn-more{
+            border-radius: 10px;
+            height: 50px;
+            background-color: #EECEB9;
+            border: 2px solid #EECEB9;
+            margin-bottom: 30px;
+        }
+
+        #btn-more:hover{
+            background-color: #BB9AB1;
+        }
+
+        #btn-more>a:hover{
+            color: #ADE4DB
+        }
+
+        #btn-more>a{
+            text-decoration-line: none;
+            color: #987D9A;
+        }
+
+        .txt-intro{
+            color: #987D9A;
+            border-top: 2px dashed #461236;
+            border-bottom: 2px dashed #461236;
+        }
+
+        /******************** 어바웃영역 *****************************/
+        /******************** 어바웃영역 *****************************/        
+        #about{
+            border: 1px solid #fffdf1;
+            background-color: #fffdf1;
+        }
+
+
+
+        #image-about{
+            /* border: 1px solid red; */
+            margin-right: 20px;
+        }
+
+        #container-about{
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:20%;
+        }
+        #image-about>img{
+            width: 400px;
+            
+        }
+
+
+        .td-left{
+            font-size: large;
+            font-weight: 900;
+            width: 100px;
+            color: #724477;
+        }
+
+        .td-right{
+            
+            font-size: large;
+            font-weight: 700;
+        }
+    
+        #btn-about{
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #btn-about button{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            border: none;
+            background-color: #724477;
+            color: #fffdf1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #btn-about button:hover{
+            background-color: #d4a0da;
+            color: #461236;
+            cursor: pointer;
+        }
+
+        /******************** 프로젝트영역 *****************************/
+        /******************** 프로젝트영역 *****************************/
+        #project{
+            /* border: 1px solid red; */
+            background-color: #FEFBD8;
+            
+        }
+
+        #prj-outer{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .prj{
+            
+            width: 250px;
+            padding: 5%;
+            background-color: #EECEB9;
+            border-radius: 20%;
+            margin: 10px 10px 10% 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .prj>*{
+            width: 100%;
+            
+        }
+
+        .prj>img{
+            border: 2px dashed #724477;
+            border-radius: 40px;
+            margin-bottom: 10px;
+        }
+
+
+        #prj-table{
+            border: 2px dashed #724477;
+            background-color:#FEFBD8;
+        }
+
+        #prj-table th{
+            color: #461236;
+            font-size: 24px;
+            
+        }
+
+        #prj-table td{
+            color :#724477;
+            font-weight: 600;
+            font-size: 20px;
+            
+            
+        }
+
+        /******************** 컨택트영역 *****************************/
+        /******************** 컨택트영역 *****************************/        
+        #contact{
+            /* border: 1px solid blue; */
+            background-color: #fffdf1;
+        }
+
+        #image-contact{
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:10%;
+        }
+
+        #image-contact>a>*{
+            width: 150px;
+            margin: 10px;
+        }
+
+        #copyright{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #461236;
+            margin: 0 0 10% 0;
+        }
+
+
+        /******************** 바로가기버튼영역 *****************************/
+        /******************** 바로가기버튼영역 *****************************/         
+        /* #goToTop{
+            position: fixed;
+            right: 60px;
+            bottom: 60px;
+            width: 80px;
+            height: 80px;
+            border: none;
+            border-radius: 100%;
+            cursor: pointer;
+            background-color: #461236;
+            color: #987D9A;
+            font-size: 20px;
+            text-align: center;
+            text-decoration-line: none;
+            line-height: 80px;
+        }
+
+        #goToTop:hover{
+            background-color: #987D9A;
+            color: #461236;
+        } */
+
+        #goToIndex{
+            position: fixed;
+            right: 60px;
+            bottom: 60px;
+            width: 100px;
+            border: none;
+            border-radius: 10%;
+            cursor: pointer;
+            background-color: #461236;
+            color: #987D9A;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        #goToIndex>*{
+            text-decoration-line: none;
+            color: #987D9A;
+        }
+
+        #goToIndex:hover{
+            background-color: #8d4992;
+            
+        }
+
+        #goToIndex>*:hover{
+            
+            color: #461236;
+        }
+
+    </style>
+    
+    <script type="text/javascript">
+        // <![CDATA[
+        var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+        var sparkles=50;
+        
+        /****************************
+        *  Tinkerbell Magic Sparkle *
+        *(c)2005-13 mf2fm web-design*
+        *  http://www.mf2fm.com/rv  *
+        * DON'T EDIT BELOW THIS BOX *
+        ****************************/
+        var x=ox=400;
+        var y=oy=300;
+        var swide=800;
+        var shigh=600;
+        var sleft=sdown=0;
+        var tiny=new Array();
+        var star=new Array();
+        var starv=new Array();
+        var starx=new Array();
+        var stary=new Array();
+        var tinyx=new Array();
+        var tinyy=new Array();
+        var tinyv=new Array();
+        
+        window.onload=function() { if (document.getElementById) {
+          var i, rats, rlef, rdow;
+          for (var i=0; i<sparkles; i++) {
+            var rats=createDiv(3, 3);
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            document.body.appendChild(tiny[i]=rats);
+            starv[i]=0;
+            tinyv[i]=0;
+            var rats=createDiv(5, 5);
+            rats.style.backgroundColor="transparent";
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            var rlef=createDiv(1, 5);
+            var rdow=createDiv(5, 1);
+            rats.appendChild(rlef);
+            rats.appendChild(rdow);
+            rlef.style.top="2px";
+            rlef.style.left="0px";
+            rdow.style.top="0px";
+            rdow.style.left="2px";
+            document.body.appendChild(star[i]=rats);
+          }
+          set_width();
+          sparkle();
+        }}
+        
+        function sparkle() {
+          var c;
+          if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+            ox=x;
+            oy=y;
+            for (c=0; c<sparkles; c++) if (!starv[c]) {
+              star[c].style.left=(starx[c]=x)+"px";
+              star[c].style.top=(stary[c]=y+1)+"px";
+              star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+              star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+              star[c].style.visibility="visible";
+              starv[c]=50;
+              break;
+            }
+          }
+          for (c=0; c<sparkles; c++) {
+            if (starv[c]) update_star(c);
+            if (tinyv[c]) update_tiny(c);
+          }
+          setTimeout("sparkle()", 40);
+        }
+        
+        function update_star(i) {
+          if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+          if (starv[i]) {
+            stary[i]+=1+Math.random()*3;
+            starx[i]+=(i%5-2)/5;
+            if (stary[i]<shigh+sdown) {
+              star[i].style.top=stary[i]+"px";
+              star[i].style.left=starx[i]+"px";
+            }
+            else {
+              star[i].style.visibility="hidden";
+              starv[i]=0;
+              return;
+            }
+          }
+          else {
+            tinyv[i]=50;
+            tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+            tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+            tiny[i].style.width="2px";
+            tiny[i].style.height="2px";
+            tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+            star[i].style.visibility="hidden";
+            tiny[i].style.visibility="visible"
+          }
+        }
+        
+        function update_tiny(i) {
+          if (--tinyv[i]==25) {
+            tiny[i].style.width="1px";
+            tiny[i].style.height="1px";
+          }
+          if (tinyv[i]) {
+            tinyy[i]+=1+Math.random()*3;
+            tinyx[i]+=(i%5-2)/5;
+            if (tinyy[i]<shigh+sdown) {
+              tiny[i].style.top=tinyy[i]+"px";
+              tiny[i].style.left=tinyx[i]+"px";
+            }
+            else {
+              tiny[i].style.visibility="hidden";
+              tinyv[i]=0;
+              return;
+            }
+          }
+          else tiny[i].style.visibility="hidden";
+        }
+        
+        document.onmousemove=mouse;
+        function mouse(e) {
+          if (e) {
+            y=e.pageY;
+            x=e.pageX;
+          }
+          else {
+            set_scroll();
+            y=event.y+sdown;
+            x=event.x+sleft;
+          }
+        }
+        
+        window.onscroll=set_scroll;
+        function set_scroll() {
+          if (typeof(self.pageYOffset)=='number') {
+            sdown=self.pageYOffset;
+            sleft=self.pageXOffset;
+          }
+          else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+            sdown=document.body.scrollTop;
+            sleft=document.body.scrollLeft;
+          }
+          else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+            sleft=document.documentElement.scrollLeft;
+            sdown=document.documentElement.scrollTop;
+          }
+          else {
+            sdown=0;
+            sleft=0;
+          }
+        }
+        
+        window.onresize=set_width;
+        function set_width() {
+          var sw_min=999999;
+          var sh_min=999999;
+          if (document.documentElement && document.documentElement.clientWidth) {
+            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+          }
+          if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+          }
+          if (document.body.clientWidth) {
+            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+          }
+          if (sw_min==999999 || sh_min==999999) {
+            sw_min=800;
+            sh_min=600;
+          }
+          swide=sw_min;
+          shigh=sh_min;
+        }
+        
+        function createDiv(height, width) {
+          var div=document.createElement("div");
+          div.style.position="absolute";
+          div.style.height=height+"px";
+          div.style.width=width+"px";
+          div.style.overflow="hidden";
+          return (div);
+        }
+        
+        function newColour() {
+          var c=new Array();
+          c[0]=255;
+          c[1]=Math.floor(Math.random()*256);
+          c[2]=Math.floor(Math.random()*(256-c[1]/2));
+          c.sort(function(){return (0.5 - Math.random());});
+          return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+        }
+        // ]]>
+        </script>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div class="navigator">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section id="intro">
+            <div id="image-intro">
+                <img src="../Portfolio-Wan/images/개.png" alt="프로필 이미지">
+            </div>
+            <div id="btn-more">
+                <a href="#about">more</a>
+            </div>
+            <div class="txt-intro"></div>
+        </section>
+        <section id="about">
+            <div class="title">[ About ]</div>
+            
+            <div id="container-about">
+                <div id="image-about">
+                    <img src="../Portfolio-Wan/images/시바1.jpg" alt="어바웃이미지">
+                </div>
+                <div id="info-about">
+                    <table>
+                        <tr>
+                            <td class="td-left">이름</td>
+                            <td class="td-right">허완</td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">생년월일</td>
+                            <td class="td-right">91.07.20</td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">거주지</td>
+                            <td class="td-right">경기도 구리시</td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">학교/전공</td>
+                            <td class="td-right">강원대학교/지리교육과</td>
+                        </tr>
+                    </table>
+                    <div id="btn-about">
+                        <button>취미</button>
+                        <button>성격</button>
+                    </div>
+            </div>
+
+        </section>
+        <section id="project">
+            <div class="title">[ Project ]</div>
+            <div id="prj-outer">
+                <div class="prj">
+                    <img src="../Portfolio-Wan/images/자바미니프로젝트.gif" alt="자바미니프로젝트">
+                    <table id="prj-table">
+                        <tr>
+                            <th>일시</th>
+                            <td>2024-07-31</td>
+                        </tr>
+                        <tr>
+                            <th>주제</th>
+                            <td>JAVA 타자연습게임</td>
+                        </tr>
+                        <tr>
+                            <th>스킬</th>
+                            <td>Java</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="prj">
+                    <img src="../Portfolio-Wan/images/자바미니프로젝트.gif" alt="자바미니프로젝트">
+                    <table id="prj-table">
+                        <tr>
+                            <th>일시</th>
+                            <td>2024-07-31</td>
+                        </tr>
+                        <tr>
+                            <th>주제</th>
+                            <td>JAVA 타자연습게임</td>
+                        </tr>
+                        <tr>
+                            <th>스킬</th>
+                            <td>Java</td>
+                        </tr>
+                    </table>
+                </div>        
+                <div class="prj">
+                    <img src="../Portfolio-Wan/images/자바미니프로젝트.gif" alt="자바미니프로젝트">
+                    <table id="prj-table">
+                        <tr>
+                            <th>일시</th>
+                            <td>2024-07-31</td>
+                        </tr>
+                        <tr>
+                            <th>주제</th>
+                            <td>JAVA 타자연습게임</td>
+                        </tr>
+                        <tr>
+                            <th>스킬</th>
+                            <td>Java</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="prj">
+                    <img src="../Portfolio-Wan/images/자바미니프로젝트.gif" alt="자바미니프로젝트">
+                    <table id="prj-table">
+                        <tr>
+                            <th>일시</th>
+                            <td>2024-07-31</td>
+                        </tr>
+                        <tr>
+                            <th>주제</th>
+                            <td>JAVA 타자연습게임</td>
+                        </tr>
+                        <tr>
+                            <th>스킬</th>
+                            <td>Java</td>
+                        </tr>
+                    </table>
+                </div>                        
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="title">[ Contact ]</div>
+            <div id="image-contact">
+                <a href="https://elderroad.tistory.com/">
+                    <img src="../Portfolio-Wan/images/blogger.svg" alt="블로그 이미지">
+                </a>
+                <a href="https://github.com/rsvprzdz">
+                    <img src="../Portfolio-Wan/images/github.svg" alt="깃허브 이미지">
+                </a>
+            </div>
+            <div id="copyright">
+                &copy 2024 - WanHeo
+            </div>
+        </section>
+        
+
+        <div id="goToIndex">
+            <a href="#header">▲ Top</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+
+        <!-- <a href="#header" id="goToTop">▲TOP</a> -->
+    </div>
+
+    
+    
+    <script>
+        const content = "안녕하세요. 뉴비 개발자 허완입니다.";
+        const text = document.querySelector(".txt-intro");
+        let i = 0;
+        
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt;
+                if (i > content.length) {
+                    text.textContent = "♥ ";
+                    i = 0;
+                }
+        }
+        setInterval(typing, 200)
+    </script>
+
+</body>
+</html>
